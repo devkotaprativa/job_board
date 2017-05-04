@@ -53,4 +53,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simple_form', '~> 3.4'
 gem 'haml', '~> 5.0', '>= 5.0.1'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap-sass', '~> 3.3.6'

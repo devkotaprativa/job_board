@@ -5,9 +5,16 @@
 = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
 = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 %body
-	-Category.all.each do |category|
-		=link_to category.name, jobs_path(category: category.name)
-	=yield
+	%nav.navbar.navbar-default
+		.container
+			.navbar-brand JOB SURF
+			%ul.nav.navbar-nav
+				%li= link_to "All Jobs", root_path
+				-Category.all.each do |category|
+					%li= link_to category.name, jobs_path(category: category.name)
+				%li= link_to "Post New Job", new_job_path
+	.container
+		=yield
 
 
 

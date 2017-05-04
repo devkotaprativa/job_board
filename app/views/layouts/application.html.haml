@@ -13,7 +13,16 @@
 				-Category.all.each do |category|
 					%li= link_to category.name, jobs_path(category: category.name)
 				%li= link_to "Post New Job", new_job_path
+				
+				-if current_user.present?
+					%li= link_to "Logout", destroy_user_session_path
+				-else
+					%li= link_to "Signup", new_user_registration_path
+					%li= link_to "Login", new_user_session_path
+
 	.container
+		.notice= notice 
+		.alert= alert
 		=yield
 
 

@@ -4,5 +4,6 @@
 	=f.input :description, label: "Description"
 	=f.input :company, label: "Your Company"
 	=f.input :url, label: "Link to the Job"
+	=f.hidden_field :user_id, :value => current_user.id
 	%br/
 	=f.button :submit
